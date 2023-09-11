@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Glosario</title>
+  </head>
+
+  <body>
+    <header>
+        <h1>Glosario de comandos GIT</h1>
+    </header>
+    <main>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Comando</th>
+                    <th>Breve Descripción</th>
+                    <th>Parámetros y Descripción</th>
+                    <th>Ejemplo</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>git init</td>
+                    <td>Inicializa un nuevo repositorio Git en el directorio actual.</td>
+                    <td>- Ninguno</td>
+                    <td>git init</td>
+                </tr>
+                <tr>
+                    <td>git clone</td>
+                    <td>Clona un repositorio remoto en un directorio local.</td>
+                    <td>- URL del repositorio remoto.</td>
+                    <td>git clone https://github.com/ejemplo/repo.git</td>
+                </tr>
+                <tr>
+                    <td>git add</td>
+                    <td>Agrega cambios al área de preparación (staging).</td>
+                    <td>- Nombre de archivos o directorios para agregar.</td>
+                    <td>git add archivo.txt</td>
+                </tr>
+                <tr>
+                    <td>git commit</td>
+                    <td>Confirma los cambios en el repositorio local.</td>
+                    <td>- `-m "Mensaje"`: Mensaje de confirmación.</td>
+                    <td>git commit -m "Agrega cambios de funcionalidad"</td>
+                </tr>
+                <tr>
+                    <td>git push</td>
+                    <td>Sube los cambios confirmados a un repositorio remoto.</td>
+                    <td>- Nombre del control remoto. - Nombre de la rama.</td>
+                    <td>git push origin master</td>
+                </tr>
+                <tr>
+                    <td>git pull</td>
+                    <td>Descarga y fusiona los cambios desde un repositorio remoto al repositorio local.</td>
+                    <td>- Nombre del control remoto. - Nombre de la rama.</td>
+                    <td>git pull origin master</td>
+                </tr>
+                <tr>
+                    <td>git fetch</td>
+                    <td>Descarga cambios desde un repositorio remoto sin fusionarlos.</td>
+                    <td>- Nombre del control remoto.</td>
+                    <td>git fetch origin</td>
+                </tr>
+                <tr>
+                    <td>git branch</td>
+                    <td>Muestra una lista de ramas locales.</td>
+                    <td>- Ninguno</td>
+                    <td>git branch</td>
+                </tr>
+                <tr>
+                    <td>git checkout</td>
+                    <td>Cambia a una rama específica o punto en la historia.</td>
+                    <td>- Nombre de la rama o identificador del commit.</td>
+                    <td>git checkout nueva-caracteristica</td>
+                </tr>
+                <tr>
+                    <td>git merge</td>
+                    <td>Fusiona cambios de una rama a otra.</td>
+                    <td>- Nombre de la rama a fusionar.</td>
+                    <td>git merge caracteristica-a-fusionar</td>
+                </tr>
+                <tr>
+                    <td>git status</td>
+                    <td>Muestra el estado actual de los archivos en el directorio de trabajo.</td>
+                    <td>- Ninguno</td>
+                    <td>git status</td>
+                </tr>
+                <tr>
+                    <td>git log</td>
+                    <td>Muestra un registro de confirmaciones (commits).</td>
+                    <td>- Opciones para personalizar la salida (por ejemplo, `--oneline`).</td>
+                    <td>git log --oneline</td>
+                </tr>
+                <tr>
+                    <td>git remote</td>
+                    <td>Muestra una lista de los controles remotos configurados.</td>
+                    <td>- Ninguno</td>
+                    <td>git remote</td>
+                </tr>
+                <tr>
+                    <td>git rm</td>
+                    <td>Elimina archivos del directorio de trabajo y del repositorio.</td>
+                    <td>- Nombre de archivos para eliminar.</td>
+                    <td>git rm archivo.txt</td>
+                </tr>
+                <tr>
+                    <td>git tag</td>
+                    <td>Administra etiquetas para marcar confirmaciones importantes.</td>
+                    <td>- `-a nombre -m "Mensaje"`: Crea una etiqueta anotada.</td>
+                    <td>git tag -a v1.0 -m "Versión 1.0"</td>
+                </tr>
+                <tr>
+                    <td>git diff</td>
+                    <td>Muestra las diferencias entre el área de preparación y el directorio de trabajo.</td>
+                    <td>- Ninguno</td>
+                    <td>git diff</td>
+                </tr>
+                <tr>
+                    <td>git reset</td>
+                    <td>Restablece el HEAD a un commit específico.</td>
+                    <td>- Opciones para especificar el tipo de restablecimiento (por ejemplo, --soft, --mixed, --hard).</td>
+                    <td>git reset --hard HEAD~2</td>
+                </tr>
+                <tr>
+                    <td>git rebase</td>
+                    <td>Reorganiza la historia de confirmaciones aplicando cambios de una rama a otra.</td>
+                    <td>- Opciones para personalizar el rebase (por ejemplo, `-i` para rebase interactivo).</td>
+                    <td>git rebase rama-origen</td>
+                </tr>
+                <tr>
+                    <td>git stash</td>
+                    <td>Guarda temporalmente cambios no confirmados para trabajar en otra tarea.</td>
+                    <td>- `-u`: Incluye archivos no rastreados en el stash.</td>
+                    <td>git stash</td>
+                </tr>
+                <tr>
+                    <td>git bisect</td>
+                    <td>Ayuda a buscar un commit específico que introdujo un error.</td>
+                    <td>- Pasos manuales para determinar si un commit es bueno o malo.</td>
+                    <td>git bisect start, git bisect bad, git bisect good</td>
+                </tr>
+                <tr>
+                    <td>git remote add</td>
+                    <td>Agrega un control remoto a un repositorio local.</td>
+                    <td>- Nombre del control remoto. - URL del repositorio remoto.</td>
+                    <td>git remote add upstream https://github.com/ejemplo/repo.git</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <h4>Sandra Lizbeth Esperanza Machuca, ITT, ISC, Interfaces Web, 2023.</h4>
+    </footer>
+  </body>
+</html>
